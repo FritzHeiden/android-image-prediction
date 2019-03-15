@@ -1,0 +1,24 @@
+{
+  "name": "android-image-prediction",
+  "version": "0.0.1",
+  "description": "Predict contents of android camera footage ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fritzendgltig/android-image-prediction.git"
+  },
+  "author": "Fritz Heiden <fritz.heiden@mailbox.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fritzendgltig/android-image-prediction/issues"
+  },
+  "homepage": "https://github.com/fritzendgltig/android-image-prediction#readme",
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-native": "^0.59.1"
+  },
+  "devDependencies": {}
+}
