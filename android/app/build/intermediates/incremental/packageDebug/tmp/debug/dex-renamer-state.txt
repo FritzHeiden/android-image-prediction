@@ -1,4 +1,0 @@
-#Fri Mar 15 15:10:11 CET 2019
-base.0=/home/fritz/Nextcloud/Documents/university/ki-in-der-robotik/free/android-image-prediction/android/app/build/intermediates/transforms/dexMerger/debug/0
-renamed.0=classes.dex
-path.0=classes.dex

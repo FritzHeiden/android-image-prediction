@@ -18,7 +18,8 @@
   "homepage": "https://github.com/fritzendgltig/android-image-prediction#readme",
   "dependencies": {
     "react": "^16.8.4",
-    "react-native": "^0.59.1"
+    "react-native": "^0.59.1",
+    "react-native-camera": "^2.0.1"
   },
   "devDependencies": {}
 }
