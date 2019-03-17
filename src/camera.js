@@ -15,6 +15,16 @@ const styles = StyleSheet.create({
 });
 
 class Camera extends React.Component {
+  async captureImage() {
+    if (!this.camera) return;
+    const options = {
+      quality: 0.5,
+      base64: true
+    };
+    const data = await this.camera.takePictureAsync(options);
+    return data;
+  }
+
   render() {
     const { style } = this.props;
     return (
@@ -25,7 +35,7 @@ class Camera extends React.Component {
           }}
           style={styles.preview}
           type={RNCamera.Constants.Type.back}
-          flashMode={RNCamera.Constants.FlashMode.on}
+          flashMode={RNCamera.Constants.FlashMode.off}
           captureAudio={false}
         />
       </View>
