@@ -20,7 +20,7 @@ class App extends React.Component {
     if (!predictionService) {
       return <ConnectionView onConnect={this.handleConnection.bind(this)} />;
     } else {
-      return <PredictionView />;
+      return <PredictionView predictionService={predictionService} />;
     }
   }
 }

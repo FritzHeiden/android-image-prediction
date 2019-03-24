@@ -19,7 +19,8 @@ class Camera extends React.Component {
     if (!this.camera) return;
     const options = {
       quality: 0.5,
-      base64: true
+      base64: true,
+      doNotSave: true
     };
     const data = await this.camera.takePictureAsync(options);
     return data;

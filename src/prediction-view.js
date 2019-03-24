@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 import Camera from "./camera";
+import PredictionService from "./prediction-service";
 
 const frequency = 0.2;
 
@@ -19,8 +20,20 @@ class PredictionView extends React.Component {
   }
 
   async predictImage() {
+    const { predictionService } = this.props;
+    this.state.prediction = null;
+    this.setState(this.state);
     const image = await this.captureImage();
-    this.state.prediction = image;
+    let prediction = "";
+    try {
+      prediction = await predictionService.predictNumber(image.base64);
+    } catch (e) {
+      console.warn("Failed to predict number:", e);
+    }
+    if (prediction === PredictionService.NO_NUMBER_RECOGNIZED) {
+      prediction = "No number recognized.";
+    }
+    this.state.prediction = prediction;
     this.setState(this.state);
     setTimeout(() => this.predictImage(), 1000 / frequency);
   }
@@ -33,9 +46,7 @@ class PredictionView extends React.Component {
   render() {
     const { prediction } = this.state;
 
-    const text = `Prediction: ${
-      prediction ? prediction.uri : "processing ..."
-    }`;
+    const text = `Prediction: ${prediction || "Processing ..."}`;
 
     return (
       <View style={styles.container}>
