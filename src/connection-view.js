@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 class ConnectionView extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { serverString: null };
+    this.state = { serverString: "192.168.178.20:8080" };
   }
 
   async handleConnect() {
@@ -84,6 +84,7 @@ class ConnectionView extends React.Component {
             keyboardType={"number-pad"}
             style={styles.textInput}
             onChangeText={this.handleTextChange.bind(this)}
+            value={this.state.serverString}
           />
           <Button title={"Connect"} onPress={this.handleConnect.bind(this)} />
         </View>

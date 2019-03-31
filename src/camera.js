@@ -20,7 +20,9 @@ class Camera extends React.Component {
     const options = {
       quality: 0.5,
       base64: true,
-      doNotSave: true
+      doNotSave: true,
+      orientation: "portrait"
+      // width: "600"
     };
     const data = await this.camera.takePictureAsync(options);
     return data;
@@ -38,6 +40,8 @@ class Camera extends React.Component {
           type={RNCamera.Constants.Type.back}
           flashMode={RNCamera.Constants.FlashMode.off}
           captureAudio={false}
+          zoom={0.5}
+          ratio={"1:1"}
         />
       </View>
     );
