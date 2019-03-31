@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   controlsWrapper: { padding: 20, paddingBottom: 50 },
-  predictionText: { marginBottom: 20 }
+  predictionText: { marginBottom: 20, fontSize: 20 }
 });
 
 class PredictionView extends React.Component {

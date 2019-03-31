@@ -12,9 +12,15 @@ class PredictionService {
   }
 
   async predictNumber(base64Data) {
-    return this._sendRequest(POST, "/prediction/predict_number", base64Data, {
-      "Content-Type": "text/plain; charset=utf-8"
-    });
+    const response = await this._sendRequest(
+      POST,
+      "/prediction/predict_number",
+      base64Data,
+      {
+        "Content-Type": "text/plain; charset=utf-8"
+      }
+    );
+    return JSON.parse(response).prediction;
   }
 
   async checkConnection() {
