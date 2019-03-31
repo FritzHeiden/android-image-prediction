@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 class ConnectionView extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { serverString: "192.168.178.20:8080" };
+    this.state = { serverString: "" };
   }
 
   async handleConnect() {
