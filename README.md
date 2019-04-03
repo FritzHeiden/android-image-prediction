@@ -49,5 +49,7 @@ If building an apk file is not working for you for some reason you can run the a
 5. Run the app with:
 
 ```
-$ react-native run-android
+$ npx react-native run-android
 ```
+
+If the development server doesn't start, try step 5 again.
